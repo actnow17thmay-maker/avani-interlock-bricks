@@ -58,7 +58,7 @@
   }
 
   /* ---------- Active nav link via section observer ---------- */
-  const sections = ["home", "about", "why", "products", "gallery", "contact"]
+  const sections = ["home", "about", "services", "products", "gallery", "designs", "leadership", "contact"]
     .map((id) => document.getElementById(id))
     .filter(Boolean);
   const navLinks = Array.from(document.querySelectorAll(".nav__link"));
@@ -110,7 +110,7 @@
   const lightboxImg = document.getElementById("lightboxImg");
   const closeBtn = lightbox.querySelector(".lightbox__close");
 
-  document.querySelectorAll(".gallery__item[data-src]").forEach((item) => {
+  document.querySelectorAll(".gallery__item[data-src], .design-card[data-src]").forEach((item) => {
     item.addEventListener("click", () => {
       lightboxImg.src = item.dataset.src;
       lightboxImg.alt = item.querySelector("img")?.alt || "";
@@ -128,17 +128,17 @@
   lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
   window.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLightbox(); });
 
-  // Video item
-  const videoItem = document.querySelector(".gallery__item--video");
-  if (videoItem) {
+  // Video items (support multiple)
+  document.querySelectorAll(".gallery__item--video").forEach((videoItem) => {
     const vid = videoItem.querySelector("video");
+    if (!vid) return;
     const toggle = () => {
       if (vid.paused) { vid.play(); videoItem.classList.add("playing"); }
       else { vid.pause(); videoItem.classList.remove("playing"); }
     };
     videoItem.addEventListener("click", toggle);
     vid.addEventListener("ended", () => videoItem.classList.remove("playing"));
-  }
+  });
 
   /* ---------- Contact form → WhatsApp ---------- */
   const form = document.getElementById("enquiryForm");
