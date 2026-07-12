@@ -137,7 +137,7 @@
 
     <ul class="hero__chips reveal" aria-label="Key highlights">
       <li><strong>10 Tons</strong><span>Load strength</span></li>
-      <li><strong>4" · 6" · 9"</strong><span>Brick sizes</span></li>
+      <li><strong>9" · 6" · 4"</strong><span>Brick sizes</span></li>
       <li><strong>100%</strong><span>Eco-friendly</span></li>
       <li><strong>Zero</strong><span>Plastering</span></li>
     </ul>
@@ -164,8 +164,21 @@
 <section class="section about" id="about">
   <div class="container about__grid">
     <div class="about__media reveal">
-      <img src="assets/images/wall-construction.jpg" alt="A wall under construction using Avani interlocking bricks" class="about__img-main" />
-      <img src="assets/images/bricks-stacked-red.jpg" alt="Neatly stacked red interlocking bricks showing the tongue-and-groove profile" class="about__img-float" />
+      <div class="slider slider--about" data-slider data-autoplay="3800" aria-label="Avani bricks and projects photo slideshow">
+        <div class="slider__track">
+          <img src="assets/images/bricks-yard-red.jpg" alt="Rows of red interlocking bricks curing in the production yard" class="slider__slide is-active" />
+          <img src="assets/images/wall-construction.jpg" alt="A wall under construction using Avani interlocking bricks" class="slider__slide" loading="lazy" />
+          <img src="assets/images/bricks-stacked-red.jpg" alt="Neatly stacked red interlocking bricks showing the tongue-and-groove profile" class="slider__slide" loading="lazy" />
+          <img src="assets/images/compound-wall-finished.jpg" alt="A completed compound wall built by Avani" class="slider__slide" loading="lazy" />
+          <img src="assets/images/wall-finish.jpg" alt="Smooth finished interlock brick wall" class="slider__slide" loading="lazy" />
+          <img src="assets/images/wall-plastered.jpg" alt="Interlock wall half plastered to show the paint-ready finish" class="slider__slide" loading="lazy" />
+          <img src="assets/images/yard-tan-close.jpg" alt="Close-up of interlocking bricks stacked in the yard" class="slider__slide" loading="lazy" />
+          <img src="assets/images/yard-tan-wide.jpg" alt="Wide view of the Avani brick production yard" class="slider__slide" loading="lazy" />
+        </div>
+        <button class="slider__arrow slider__arrow--prev" type="button" data-dir="-1" aria-label="Previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <button class="slider__arrow slider__arrow--next" type="button" data-dir="1" aria-label="Next photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+        <div class="slider__dots"></div>
+      </div>
       <div class="about__badge">
         <strong>10T</strong>
         <span>Withstands<br />heavy load</span>
@@ -213,7 +226,7 @@
     </div>
     <div class="stat reveal">
       <span class="stat__num" data-count="3" data-suffix="">0</span>
-      <span class="stat__label">Brick sizes (4", 6" &amp; 9")</span>
+      <span class="stat__label">Brick sizes (9", 6" &amp; 4")</span>
     </div>
     <div class="stat reveal">
       <span class="stat__num" data-count="100" data-suffix="%">0</span>
@@ -322,72 +335,70 @@
       <p class="eyebrow reveal"><span class="eyebrow-rule"></span> Our Products <span class="eyebrow-rule"></span></p>
       <h2 class="section__title reveal">Interlocking bricks for every build</h2>
       <p class="section__intro reveal">
-        Available in red soil-cement and grey concrete, in 4 inch, 6 inch and 9 inch sizes — choose the
-        right brick for walls, compound walls, buildings and sheds.
+        Available in 9 inch, 6 inch and 4 inch sizes — each in red soil-cement and grey concrete.
+        Slide any card to see both colours and choose the right brick for walls, compound walls,
+        buildings and sheds.
       </p>
     </div>
 
     <div class="products__grid">
       <article class="product reveal">
         <div class="product__media">
-          <img src="assets/images/brick-red-6inch.jpg" alt="Red interlocking brick, size 6 x 12 x 5 inches" />
-          <span class="product__tag">Best Seller</span>
-        </div>
-        <div class="product__body">
-          <h3>Red Interlock Brick</h3>
-          <p class="product__spec">Size 6 × 12 × 5 in</p>
-          <p>Our signature soil-cement interlocking brick. Strong, smooth and ready to lay with minimal mortar.</p>
-          <div class="product__tags"><span>Walls</span><span>Homes</span><span>Compound</span></div>
-          <a href="#contact" class="product__link">Enquire <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-
-      <article class="product reveal">
-        <div class="product__media">
-          <img src="assets/images/brick-grey-trio.jpg" alt="Grey concrete interlocking bricks showing the interlocking grooves" />
-        </div>
-        <div class="product__body">
-          <h3>Grey Concrete Interlock</h3>
-          <p class="product__spec">4", 6" &amp; 9" available</p>
-          <p>High-density concrete interlock bricks built for load-bearing walls and heavy-duty structures.</p>
-          <div class="product__tags"><span>Buildings</span><span>Load-bearing</span></div>
-          <a href="#contact" class="product__link">Enquire <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </article>
-
-      <article class="product reveal">
-        <div class="product__media">
-          <img src="assets/images/brick-grey-single.jpg" alt="A single grey interlocking brick" />
+          <div class="slider slider--product" data-slider aria-label="9 inch interlock brick in red and grey">
+            <div class="slider__track">
+              <img src="assets/images/brick-red-9inch.jpg" alt="Red 9 inch interlocking brick, size 9 x 12 x 5 inches" class="slider__slide is-active" />
+              <img src="assets/images/brick-grey-single.jpg" alt="Grey concrete 9 inch interlocking bricks" class="slider__slide" loading="lazy" />
+            </div>
+            <button class="slider__arrow slider__arrow--prev" type="button" data-dir="-1" aria-label="Previous image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="slider__arrow slider__arrow--next" type="button" data-dir="1" aria-label="Next image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+            <div class="slider__dots"></div>
+          </div>
         </div>
         <div class="product__body">
           <h3>9 Inch Interlock</h3>
-          <p class="product__spec">Thick wall · extra strength</p>
-          <p>The 9 inch profile for outer walls, compound walls and structures that need extra strength.</p>
-          <div class="product__tags"><span>Compound walls</span><span>Sheds</span></div>
+          <p class="product__spec">Size 9 × 12 × 5 in · Red &amp; Grey</p>
+          <p>The thick 9 inch profile for outer walls, compound walls and structures that need extra strength.</p>
+          <div class="product__tags"><span>Compound walls</span><span>Load-bearing</span></div>
           <a href="#contact" class="product__link">Enquire <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
 
       <article class="product reveal">
         <div class="product__media">
-          <img src="assets/images/brick-grey-tall.jpg" alt="A grey interlocking brick standing upright" />
+          <div class="slider slider--product" data-slider aria-label="6 inch interlock brick in red and grey">
+            <div class="slider__track">
+              <img src="assets/images/brick-red-6inch.jpg" alt="Red 6 inch interlocking brick, size 6 x 12 x 5 inches" class="slider__slide is-active" />
+              <img src="assets/images/brick-grey-tall.jpg" alt="Grey concrete 6 inch interlocking brick" class="slider__slide" loading="lazy" />
+            </div>
+            <button class="slider__arrow slider__arrow--prev" type="button" data-dir="-1" aria-label="Previous image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="slider__arrow slider__arrow--next" type="button" data-dir="1" aria-label="Next image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+            <div class="slider__dots"></div>
+          </div>
         </div>
         <div class="product__body">
           <h3>6 Inch Interlock</h3>
-          <p class="product__spec">Lightweight · versatile</p>
-          <p>The everyday 6 inch brick for internal partitions and fast, economical wall construction.</p>
-          <div class="product__tags"><span>Partitions</span><span>Interiors</span></div>
+          <p class="product__spec">Size 6 × 12 × 5 in · Red &amp; Grey</p>
+          <p>Our signature everyday brick for homes, internal walls and fast, economical construction.</p>
+          <div class="product__tags"><span>Homes</span><span>Walls</span><span>Partitions</span></div>
           <a href="#contact" class="product__link">Enquire <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
 
       <article class="product reveal">
         <div class="product__media">
-          <img src="assets/images/brick-red-4inch.jpg" alt="A slim 4 inch interlocking brick, size 4 x 12 x 5 inches" />
+          <div class="slider slider--product" data-slider aria-label="4 inch interlock brick in red and grey">
+            <div class="slider__track">
+              <img src="assets/images/brick-red-4inch.jpg" alt="Slim red 4 inch interlocking brick, size 4 x 12 x 5 inches" class="slider__slide is-active" />
+              <img src="assets/images/brick-grey-trio.jpg" alt="Grey concrete 4 inch interlocking brick" class="slider__slide" loading="lazy" />
+            </div>
+            <button class="slider__arrow slider__arrow--prev" type="button" data-dir="-1" aria-label="Previous image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="slider__arrow slider__arrow--next" type="button" data-dir="1" aria-label="Next image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+            <div class="slider__dots"></div>
+          </div>
         </div>
         <div class="product__body">
           <h3>4 Inch Interlock</h3>
-          <p class="product__spec">Size 4 × 12 × 5 in</p>
+          <p class="product__spec">Size 4 × 12 × 5 in · Red &amp; Grey</p>
           <p>The slim 4 inch profile for light partitions, parapet walls and space-saving interior walls.</p>
           <div class="product__tags"><span>Parapet walls</span><span>Light partitions</span></div>
           <a href="#contact" class="product__link">Enquire <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -637,8 +648,8 @@
       </figure>
 
       <figure class="design-card reveal" data-src="assets/images/design-brick-sizes.jpg">
-        <img src="assets/images/design-brick-sizes.jpg" alt="Avani interlock brick sizes — 4, 6 and 9 inch with full dimensions" loading="lazy" />
-        <figcaption><strong>Brick Sizes</strong><span>4″ · 6″ · 9″ specifications</span></figcaption>
+        <img src="assets/images/design-brick-sizes.jpg" alt="Avani interlock brick sizes — 9, 6 and 4 inch with full dimensions" loading="lazy" />
+        <figcaption><strong>Brick Sizes</strong><span>9″ · 6″ · 4″ specifications</span></figcaption>
       </figure>
 
       <figure class="design-card reveal" data-src="assets/images/wall-finishes.jpg">
@@ -843,11 +854,11 @@
         <div class="field">
           <label for="product">Requirement</label>
           <select id="product" name="product">
+            <option>9 Inch Interlock</option>
+            <option>6 Inch Interlock</option>
+            <option>4 Inch Interlock</option>
             <option>Red Interlock Brick</option>
             <option>Grey Concrete Interlock</option>
-            <option>4 Inch Interlock</option>
-            <option>6 Inch Interlock</option>
-            <option>9 Inch Interlock</option>
             <option>End-to-End Construction</option>
             <option>Not sure — need advice</option>
           </select>
@@ -894,11 +905,11 @@
 
     <div class="footer__col">
       <h4>Products</h4>
+      <a href="#products">9 Inch Brick</a>
+      <a href="#products">6 Inch Brick</a>
+      <a href="#products">4 Inch Brick</a>
       <a href="#products">Red Interlock Brick</a>
       <a href="#products">Grey Concrete Interlock</a>
-      <a href="#products">4 Inch Brick</a>
-      <a href="#products">6 Inch Brick</a>
-      <a href="#products">9 Inch Brick</a>
     </div>
 
     <div class="footer__col">

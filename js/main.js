@@ -140,6 +140,57 @@
     vid.addEventListener("ended", () => videoItem.classList.remove("playing"));
   });
 
+  /* ---------- Sliders (about slideshow + product red/grey) ---------- */
+  document.querySelectorAll("[data-slider]").forEach((slider) => {
+    const slides = Array.from(slider.querySelectorAll(".slider__slide"));
+    if (slides.length < 2) return;
+    const dotsWrap = slider.querySelector(".slider__dots");
+    let index = Math.max(0, slides.findIndex((s) => s.classList.contains("is-active")));
+    slides[index].classList.add("is-active");
+
+    const dots = slides.map((_, n) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "slider__dot" + (n === index ? " is-active" : "");
+      dot.setAttribute("aria-label", "Go to image " + (n + 1) + " of " + slides.length);
+      dot.addEventListener("click", () => { go(n); restart(); });
+      dotsWrap.appendChild(dot);
+      return dot;
+    });
+
+    const go = (n) => {
+      slides[index].classList.remove("is-active");
+      dots[index].classList.remove("is-active");
+      index = (n + slides.length) % slides.length;
+      slides[index].classList.add("is-active");
+      dots[index].classList.add("is-active");
+    };
+
+    slider.querySelectorAll(".slider__arrow").forEach((btn) => {
+      btn.addEventListener("click", () => { go(index + Number(btn.dataset.dir)); restart(); });
+    });
+
+    // Autoplay (about slideshow), paused while hovering
+    const delay = Number(slider.dataset.autoplay) || 0;
+    let timer = null;
+    const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
+    const start = () => { if (delay && !timer) timer = setInterval(() => go(index + 1), delay); };
+    const restart = () => { stop(); start(); };
+    slider.addEventListener("pointerenter", stop);
+    slider.addEventListener("pointerleave", start);
+    start();
+
+    // Swipe
+    let downX = null;
+    slider.addEventListener("pointerdown", (e) => { downX = e.clientX; });
+    slider.addEventListener("pointerup", (e) => {
+      if (downX === null) return;
+      const dx = e.clientX - downX;
+      downX = null;
+      if (Math.abs(dx) > 40) { go(index + (dx < 0 ? 1 : -1)); restart(); }
+    });
+  });
+
   /* ---------- Contact form → WhatsApp ---------- */
   const form = document.getElementById("enquiryForm");
   const note = document.getElementById("formNote");
