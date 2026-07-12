@@ -658,17 +658,9 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height
   align-items: center; margin-bottom: clamp(48px, 7vw, 84px);
 }
 .services__media { position: relative; }
-.services__img-main { width: 100%; aspect-ratio: 4/3.2; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
-.services__img-float {
-  position: absolute; right: -20px; bottom: -30px; width: 46%; aspect-ratio: 4/3;
-  object-fit: cover; border-radius: var(--radius); border: 6px solid var(--cream); box-shadow: var(--shadow-lg);
-}
-.services__badge {
-  position: absolute; left: -18px; top: 24px; display: flex; align-items: center; gap: 12px;
-  background: var(--terracotta); color: #fff; padding: 13px 18px; border-radius: 14px; box-shadow: var(--shadow-lg);
-}
-.services__badge strong { font-family: var(--font-display); font-size: 1.9rem; line-height: 1; }
-.services__badge span { font-size: 0.74rem; line-height: 1.25; color: rgba(255,255,255,0.9); }
+.services__media[data-src] { cursor: pointer; }
+.services__img-main { width: 100%; aspect-ratio: 3/2; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); transition: transform var(--t-fast), box-shadow var(--t-fast); }
+.services__media[data-src]:hover .services__img-main { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .services__sub { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.3rem, 1rem + 1.4vw, 1.95rem); }
 .services__sub.center { text-align: center; }
 .services__pipeline > p { color: var(--stone); margin-top: 14px; max-width: 520px; }

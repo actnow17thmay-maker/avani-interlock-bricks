@@ -110,7 +110,7 @@
   const lightboxImg = document.getElementById("lightboxImg");
   const closeBtn = lightbox.querySelector(".lightbox__close");
 
-  document.querySelectorAll(".gallery__item[data-src], .design-card[data-src]").forEach((item) => {
+  document.querySelectorAll(".gallery__item[data-src], .design-card[data-src], .services__media[data-src]").forEach((item) => {
     item.addEventListener("click", () => {
       lightboxImg.src = item.dataset.src;
       lightboxImg.alt = item.querySelector("img")?.alt || "";
